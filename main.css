@@ -1,58 +1,353 @@
-body {
-background-color: rgb(131, 131, 131);
-color: black;
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  background: #232323;
+  color: #eeeeee;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 }
+
+#recipesimg{
+       
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.contentimgs{
+  border-radius: 15px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #ffffff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  border-radius: 0px 0 15px 0px;
+  background: #ededed81;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+
+/* SEARCH BAR */
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid rgb(212, 212, 212);
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: rgb(0, 0, 0);
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid rgb(212, 212, 212);
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 7%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+  }
+/* END OF SEARCH BAR */
+
 
 #topimg{
     margin: 1em auto;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 15px;
 }
 #content {
     margin: 1em auto;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 200px;
 }
 #extra{
     text-align: center;
-    margin: .25em auto;
+    margin: 1em auto;
 }
 
 h1, h2{ font-family: "Playfair Display";}
 
 p{
-    font-size: 1.30em;
+    font-size: 1em;
     padding-left: 1em;
     padding-right: 1em;
-    text-align: center;
+    text-align: justify;
     font-family: Montserrat;
 }
+
+.mainbar{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+
+  #menu
+{
+  position: absolute;
+  width: 225px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;}
+
+a:link, a:visited {
+    background-color: #000000;
+    color: white;
+    padding: 1em .4em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ border-radius: 1em;
+    font-size: 1.5rem;
+    max-width: 23%;
+    font-family: "Lucida Console", "EF Lucida Sans", monospace;
+    text-shadow: 1px 1px  #a3a3a3;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+    margin-left: auto;
+
+  }
+  
+  a:hover, a:active {
+    background-color: #3a393b;
+    text-shadow: 0px 1.75px #085078;
+
+  }
+
+  div.mainbar{
+   padding-left: .5em;
+   padding-top: .5em;
+   margin-left: auto;
+   margin-right: auto;
+  }
+}
+
+
+
+
 
 /* tablet */
 
 @media screen and (min-width: 768px){
-    body{
-        background-color: rgb(131, 131, 131);
-        color: black;
-    }
+
+  
+    
     p{
         font-size: 1.5em;
     }
+    a:link, a:visited {
+      background-color: #000000;
+      color: white;
+        padding: .5em 1.5em .25em;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        max-width: 25%;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto; 
+        font-size: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Lucida Console", "EF Lucida Sans", monospace;
+        text-shadow: 1px 1px  #a3a3a3;
+        transition-duration: .15s;
+        transition-timing-function: linear;
+        border-radius: 1em;
+      }
+      
+      a:hover, a:active {
+        background-color: #3a393b;
+        text-shadow: 0px 1.75px #085078;
+    
+      }
+    
+      div.mainbar{
+       padding-left: .5em;
+       padding-top: .5em;
+      }
     #topimg{
         margin: 1em auto;
-        max-width: 300px;
+        max-width: 200px;
         max-height: 300px;
 }
     h1{font-size: 2.25em;}
     h2{font-size: 1.75em;}
+
+
+    .instructionstext{
+        font-size: 1em;
+        padding-left: 5em;
+        padding-right: 5em;
+        text-align: justify;
+        font-family: Montserrat;
+    }
+
+    
 }
 /* desktop */
 
 @media screen and (min-width: 1024px){
-    body{
-        background-color: rgb(131, 131, 131);
-        color: black;
-    }
+
+  .contentimgs{
+       
+    max-width: 400px;
+    max-height: 400px;
+}
+#recipesimg{
+       
+  max-width: 425px;
+  max-height: 425px;
+}
+
 
     p{
         font-size: 1.15em;
@@ -76,4 +371,45 @@ p{
         max-width: 400px;
         max-height: 400px;
 }
+
+
+
+a:link, a:visited {
+  background-color: #000000;
+  color: white;
+    padding: .25em 3.5em .25em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    max-width: 100%;
+    font-size: 1.5rem;
+   max-width: 25%;
+    margin-left: 16%;
+    margin-right: auto; 
+    font-family: "Lucida Console", "EF Lucida Sans", monospace;
+    text-shadow: 1px 1px  #85d8ce;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+
+  }
+  
+  a:hover, a:active {
+    background-color: #3a393b;
+    text-shadow: 0px 1.75px #085078;
+
+  }
+
+  div.mainbar{
+   padding-left: .5em;
+   padding-top: .5em;
+  }
+
+  #menu{
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 30px;
+    padding-top: 100px;}
+
 }
+
