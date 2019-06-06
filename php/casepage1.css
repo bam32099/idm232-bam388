@@ -1,0 +1,219 @@
+.hero-section {
+  background: url("https://via.placeholder.com/1080x500") 50% no-repeat;
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          margin-top: 3em;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 2px 2px 4px #0a0a0a;
+}
+
+
+
+
+img.examples{
+  max-width: 85%;
+  height: auto;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  opacity: .75;
+
+    border: solid .25em #125a81;
+}
+
+img.examples:hover{
+transform: scale(1.025);
+z-index: 5000 !important;
+border-color: rgb(226, 116, 253);
+border-radius: .25em;
+opacity: 1;
+}
+
+a:link, a:visited {
+  background-color: #125a81;
+  color: white;
+  padding: 1em 3em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+  max-width: 25%;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+
+  transition-duration: .15s;
+  transition-timing-function: linear;
+}
+
+a:hover, a:active {
+  background-color: rgb(226, 116, 253);
+  transform: scale(1.1);
+  color: black;
+  border-radius: 2rem;
+  text-shadow: 0px 1px #ffffff;
+
+}
+
+a.centerme {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 1px){
+
+
+
+  .headerimg{
+    padding-left: 1.25em;
+   z-index: 500;
+   height: 4.75em;
+   position: fixed;
+   top: 0;
+  }
+
+  .main {
+    margin-top: 1em;
+    text-align: center;
+   
+  }
+
+    
+    p{
+        font-size: 1.5em;
+        text-align: center;
+        max-width: 40ch;
+      padding-left: 3em;
+      padding-right: 3em;
+margin-left: auto;
+margin-right: auto;
+    }
+
+
+  .navbar {
+    overflow: hidden;
+    background: rgb(255,255,255);
+background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(151,235,255,1) 66%, rgba(234,151,255,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(151,235,255,1) 66%, rgba(234,151,255,1) 100%);
+background: linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(151,235,255,1) 66%, rgba(234,151,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ea97ff",GradientType=1);
+border-radius: 0 0 0 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5em;
+    z-index: 400;
+  }
+
+.fade{
+
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0.4970760233918129) 37%, rgba(151,235,255,0.5029239766081872) 66%, rgba(234,151,255,0.5029239766081872) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.4970760233918129) 37%, rgba(151,235,255,0.5029239766081872) 66%, rgba(234,151,255,0.5029239766081872) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.4970760233918129) 37%, rgba(151,235,255,0.5029239766081872) 66%, rgba(234,151,255,0.5029239766081872) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ea97ff",GradientType=1);
+filter: blur(5px);
+border-radius: 0 0 0 1.5em;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5.5em;
+  z-index: 300;
+}
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  background: #232323;
+  color: #eeeeee;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+
+
+#topimg{
+    margin: 1em auto;
+}
+
+
+h1, h2{ font-family: "Playfair Display";}
+h2{font-size: 1.75em;}
+
+p{
+    font-size: 1em;
+    text-align: center;
+    font-family: Montserrat;
+  
+}
+
+
+}
+
+
+
+
+
+
+
+/* tablet */
+
+@media screen and (min-width: 768px){
+
+  
+
+
+  .headerimg{
+    padding-left: 1.25em;
+   z-index: 500;
+   height: 4.75em;
+   position: fixed;
+   top: 0;
+  }
+
+  .main {
+    margin-top: 7em;
+    text-align: center;
+   
+  }
+
+    
+    p{
+        font-size: 1.5em;
+        text-align: center;
+        max-width: 40ch;
+      padding-left: 4em;
+      padding-right: 4em;
+margin-left: auto;
+margin-right: auto;
+    }
+    
+
+}
+/* desktop */
+
+@media screen and (min-width: 1024px){
+
+    p{
+        font-size: 1.15em;
+        text-align: center;
+    }
+   
+
+}
+

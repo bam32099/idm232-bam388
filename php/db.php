@@ -6,7 +6,7 @@ $db_server = 'localhost';
 // he defines these as constants and not varaibles so that it does not change by mistake. putting the name of the constants in all caps
  define('DB_SERVER', 'localhost');
  define('DB_USER', 'root');
- define('DB_PASS', 'root');
+ define('DB_PASS', '');
  define('DB_NAME', 'recipe');
 
  $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
@@ -20,4 +20,3 @@ $db_server = 'localhost';
 
 ?>
 
-<!-- // placed in the includes folder -->

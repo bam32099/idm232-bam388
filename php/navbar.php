@@ -19,9 +19,9 @@
 			<span></span>
 			<span></span>
 			<ul id="menu">
-				<a href="index.html"><li>Home</li></a>
-				<a href="help.html"><li>Help</li></a>
-				<a href="zeroresults.html"><li>Info</li></a>
+				<a class="menuitems" href="home.php"><li>Home</li></a>
+				<a class="menuitems" href="help.html"><li>Help</li></a>
+				<a class="menuitems" href="casestudy.html"><li>Info</li></a>
 
 			</ul>
 		</div>

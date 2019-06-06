@@ -10,21 +10,50 @@ body
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
+
+
+.instructionstext{
+  font-size: 1.15em;
+border-radius: 15px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5%;
+  background-color: #dddddd;
+  color: #000000;
+}
+
 span{color: white;}
 
 #recipesimg{
        
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
-.contentimgs{
-  border-radius: 15px;
-  max-width: 200px;
-  max-height: 200px;
+img.contentimgs{
+  border-radius: 5px;
+ max-width: 200px;
+ max-height: 200px;
+
 }
 
-a
+.tile:hover, .tile:active{
+  -webkit-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+
+  box-shadow:  0 0 0 2px #949494;
+}
+
+
+img.stepimgs{
+       border-radius: 5px;
+  max-width: 400px;
+  max-height: 400px;
+
+}
+
+a.menuitems
 {
   text-decoration: none;
   color: #232323;
@@ -32,7 +61,7 @@ a
   transition: color 0.3s ease;
 }
 
-a:hover
+a.menuitems:hover
 {
   color: tomato;
 }
@@ -200,7 +229,27 @@ a:hover
     max-width: 200px;
     max-height: 200px;
     border-radius: 15px;
+    transition: .25s;
 }
+
+@media screen and (max-width: 1020px){
+#topimg:hover{
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+transform: scale(1.3);
+  border-radius: 3px;
+  box-shadow:  0 0 0 2px #ffffff;
+}}
+
+@media screen and (min-width: 1021px){
+  #topimg:hover{
+
+    border-radius: 3px;
+    box-shadow:  0 0 0 2px #ffffff;
+  }}
+
+
+
 #content {
     margin: 1em auto;
     max-width: 200px;
@@ -240,7 +289,7 @@ p{
   padding: 50px;
   padding-top: 125px;}
 
-a:link, a:visited {
+a.menuitems:link, a.menuitems:visited {
     background-color: #000000;
     color: white;
     padding: 1em .4em 1em;
@@ -258,7 +307,7 @@ a:link, a:visited {
 
   }
   
-  a:hover, a:active {
+  a.menuitems:hover, a.menuitems:active {
     background-color: #3a393b;
     text-shadow: 0px 1.75px #085078;
 
@@ -285,7 +334,7 @@ a:link, a:visited {
     p{
         font-size: 1.5em;
     }
-    a:link, a:visited {
+    a.menuitems:link, a.menuitems:visited {
       background-color: #000000;
       color: white;
         padding: .5em 1.5em .25em;
@@ -306,7 +355,7 @@ a:link, a:visited {
         border-radius: 1em;
       }
       
-      a:hover, a:active {
+      a.menuitems:hover, a.menuitems:active {
         background-color: #3a393b;
         text-shadow: 0px 1.75px #085078;
     
@@ -320,17 +369,20 @@ a:link, a:visited {
         margin: 1em auto;
         max-width: 200px;
         max-height: 300px;
+        transition: .5s;
 }
-    h1{font-size: 2.25em;}
-    h2{font-size: 1.75em;}
+    h1{font-size: 2.02em;}
+    h2{font-size: 1.42em;}
 
 
     .instructionstext{
-        font-size: 1em;
-        padding-left: 5em;
-        padding-right: 5em;
+        font-size: 1.3em;
+border-radius: 15px;
         text-align: justify;
-        font-family: Montserrat;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1.3%;
+        background-color: #dddddd;
+        color: #000000;
     }
 
     
@@ -341,9 +393,16 @@ a:link, a:visited {
 
   .contentimgs{
        
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 800px;
+    max-height: 800px;
 }
+
+img.stepimgs{
+       
+  max-width: 800px;
+  max-height: 800px;
+}
+
 #recipesimg{
        
   max-width: 425px;
@@ -369,14 +428,14 @@ a:link, a:visited {
         padding-top: 1em;
     }
     #topimg{
-       
-        max-width: 400px;
-        max-height: 400px;
+      transition: .5s;
+        max-width: 370px;
+        max-height: 370px;
 }
 
 
 
-a:link, a:visited {
+a.menuitems:link, a.menuitems:visited {
   background-color: #000000;
   color: white;
     padding: .25em 3.5em .25em;
@@ -395,7 +454,7 @@ a:link, a:visited {
 
   }
   
-  a:hover, a:active {
+  a.menuitems:hover, a.menuitems:active {
     background-color: #3a393b;
     text-shadow: 0px 1.75px #085078;
 
